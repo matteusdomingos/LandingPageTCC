@@ -1,0 +1,196 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400&display=swap');
+
+/* Inicio- Anular configurações pre-definidas*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;   
+}
+/* Fim- Anular configurações pre-definidas*/
+
+html{ /* criado para definir a medida rem como a padrao*/
+    font-size: 62.5%; /* a cada 1rem será considerado 10px */
+}
+
+body{
+    font-size: 1.6rem;
+    background-image: linear-gradient(to top, #0fd850 0%, #f9f047 100%);
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.cabecalho{
+    display: flex;
+    flex-direction: row;  
+    align-items: center;
+    justify-content: space-around;
+    padding: 24px;
+}
+
+.cabecalho-menu{
+    display: flex;
+    align-items: center; 
+}
+
+.cabecalho-menu-item{
+    font-family: 'Poppins', sans-serif;
+    color: #004b23;
+    font-weight: 600;
+    font-size: 1.6rem;
+    padding: 15px;
+}
+
+.cabecalho-menu-item:hover{
+    color: #118ab2;
+    transition: 0.2s all; /* Define a velocidade que da mudança da cor do hover*/
+    
+}
+
+#email-btn{
+    border: 2px solid #007200; /* define a borda. Primeiro a espessura, modo, cor. */
+    padding: 10px;
+    border-radius: 20px;
+    
+}
+
+#email-btn:hover{
+    background-color: #007200;
+    color: #118ab2;
+    transition: 0.2s all;
+}
+
+.conteudo{
+    margin-bottom: 48px;
+    border-top: 0.5px solid #007200;
+    padding: 32px;
+}
+
+.conteudo-principal{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.conteudo-principal-escrito{
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    
+}
+
+.conteudo-principal-escrito-titulo{
+    font-family: 'Montserrat', sans-serif;
+    color: #004b23;
+    font-weight: 400;
+    font-size: 5.0rem;    
+}
+
+
+.conteudo-principal-escrito-subtitulo{
+    font-family: 'Montserrat', sans-serif;
+    color: #072716;
+    line-height: 2rem; /* define a distância entre as linhas */
+    font-weight: 200;
+    font-size: 2.4rem;
+    max-width: 500px; 
+}
+
+.formulario{
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+}
+
+input{
+    margin-top: 15px;
+    height: 30px;
+    padding: 15px;
+    border-radius: 20px;
+    font-size: 1.5rem;
+    border: none;
+}
+
+.formulario [type="submit"]{  /* Estilização de forma semântica para apenas o botão. */
+    height: 50px;
+    width: 50%;
+    background-color: #007200;
+    color: white;
+    font-weight: bold;
+    
+}
+
+.formulario [type="submit"]:hover{  /* Estilização de forma semântica para apenas o botão junto ao hover */
+    cursor: pointer;
+}
+
+.conteudo-principal-imagem{
+    height: 50rem;
+}
+
+.conteudo-secundario{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    margin-top: 48px;    
+}
+
+.conteudo-secundario-titulo{
+    border-top: 0.5px solid #007200;
+    padding-top: 48px;
+    font-family: 'Poppins', sans-serif;
+    color: #008000;
+    font-weight: 400;
+    font-size: 2.8rem;
+    margin-bottom: 15px;
+}
+
+.conteudo-secundario-paragrafo{
+    font-family: 'Montserrat', sans-serif;
+    color: #008000;
+    font-weight: 400;
+    font-size: 1.8rem;
+    line-height: 1rem;
+}
+
+.rodape{
+    border-top: 0.4px solid #007200;
+    padding: 32px;
+    display: block;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    color: #004b23;
+    font-weight: 400;
+    font-size: 1.8rem;
+}
+
+table{
+    border-radius: 15px;
+    text-align: center;
+    border: 2px solid #007200;
+    margin-top: 20px;
+    max-width: 50%;  
+}
+.cadastrados{
+    margin-bottom: 48px;
+    border-top: 0.5px solid #007200;
+    padding: 32px; 
+    height: 520px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.conteudo-cadastrados-titulo{
+    font-family: 'Montserrat', sans-serif;
+    color: #004b23;
+    font-weight: 400;
+    font-size: 2rem;   
+}
+
+.tabelas-cadastrados{
+    
+}

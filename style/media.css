@@ -1,0 +1,102 @@
+@media screen and (max-width: 880px){
+    .conteudo-principal-imagem{
+        height: 40rem;
+    }
+}
+
+@media screen and (max-width: 768px){
+    .conteudo-principal-imagem{
+        height: 30rem;
+    }
+
+    .cabecalho-menu-item{
+        display: none;
+    }
+    .one,
+    .two,
+    .three{
+        background-color: #fff;
+        height: 5px;
+        width: 100%;
+        margin: 6px auto;
+
+        transition-duration: 0.3s;  /* Defino essa propriedade para quando for utilizar uma transição do hamburguer em X*/
+    }
+
+    .menu-toggle{
+        width: 40px;
+        height: 30px;
+        margin-right: 45px;
+        position: -1;
+    }
+
+    .menu-section.on{         /*Estilização da ação quando o menu for clicado*/
+        position: absolute;   /*Defino a posição absoluta*/     
+        top: 0;               
+        left: 0;
+
+        width: 100vw;  /*Defino a largura de 100, ou seja, o total da viewport width*/
+        height: 100vh; /*Defino a altura de 100, ou seja, o total da viewport height*/
+
+        background-color: #346de9;
+        
+        z-index: 10;  /*Defino a posição no eixo z, ou seja, definindo que o z fique na camada 10*/
+        
+        display: flex;     /* Localização do container */
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .menu-section.on a{  /* libera a visualização dos itens do menu antigo*/
+        display: block;
+
+        text-align: center;
+        transition-duration: 0.5s;
+        font-size: 2rem;
+        line-height: 8rem;
+    }
+
+    .menu-section.on .menu-toggle{    /* Alterar a localização do menu hamburguer no display*/
+        position: absolute;
+        right: 30px;
+        top: 15px;
+    }
+
+    .menu-section.on .menu-toggle .one{         /* Transformar o menu hamburguer em X*/
+        transform: rotate(45deg) translate(7px, 7px);   /* Altero a rotação do item one em 45º e altero o eixo X e Y com o translate */ 
+    }
+
+    .menu-section.on .menu-toggle .two{  
+        opacity: 0;              /* Altero a opacidade ao invés de anular o display para posteriormente ser utilizado em uma transição*/
+    }
+
+    .menu-section.on .menu-toggle .three{
+        transform: rotate(-45deg) translate(8px, -9px);
+    }
+
+    .formulario [type="submit"]{
+        font-size: 80%;
+    }
+
+    .conteudo-secundario-paragrafo{
+        text-align: center;
+        line-height: 2rem;
+        
+    }
+}
+
+@media screen and (max-width: 582px){
+    .conteudo-principal-imagem{
+        display: none;
+    }
+
+    html{
+        font-size: 50%;
+    }
+
+    .conteudo-secundario-paragrafo{
+        text-align: center;
+        line-height: 2rem;    
+    }
+}
