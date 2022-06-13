@@ -16,12 +16,12 @@
     //Fim 2º passo enviar dados para o banco
 
     // inicio validação se formulário está preenchido ou não
-        $mensagem = "Salvo com sucesso!";                    //Variável que será utilizada na próximo função(header) onde irá informar se foi inserido ou não dados no formulário. 
+        $mensagem = "Pedido enviado com sucesso!";                    //Variável que será utilizada na próximo função(header) onde irá informar se foi inserido ou não dados no formulário. 
         header("Location: index.php?msg=$mensagem");         //Função header é usada para enviar uma mensagem ao cabeçalho, onde location define o local em que a $mensagem será retornada
     exit();                                                  //Para a execução desse código
 
     }else{
-        $mensagem = "Valores inválidos!";
+        $mensagem = "Falha ao enviar pedido, favor preencher corretamente!";
         header("Location: index.php?msg=$mensagem");
         exit();
     }

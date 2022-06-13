@@ -11,14 +11,15 @@
         <section class="conteudo-principal">
             <div class="conteudo-principal-escrito">
                 <h1 class="conteudo-principal-escrito-titulo">Minhas Viagens</h1>
-                <h2 class="conteudo-principal-escrito-subtitulo">Lorem ipsum dolor sit amet, consectetur adipisci elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua.</h2>
+                <h2 class="conteudo-principal-escrito-subtitulo">Deseja receber um roteiro exclusivo com dicas e passos para ter uma viajem mais tranquila sem ter que se preocupar com esses detalhes? <br>Preencha o formulário a baixo e receba em alguns dias em seu email!</h2>
 
                 <form class="formulario" action="salvarContato.php" method="POST">
                     <input type="text" name="nome" placeholder="Nome">
                     <input type="email" name="email" placeholder="Email">
                     <input type="submit" value="Eu quero!">
                 </form>
-                
+
+                <div class="mensagem-confirmacao">
                 <!-- Apresentação da mensagem se formulário foi preenchido ou não-->
                 <?php
                 if (isset($_GET["msg"])) {              //isset acessa a variável onde $_GET vai copiar o que está após "?" na URL, que foi configurado em msg no arquivo salvarContato.php
@@ -26,6 +27,7 @@
                 }
                 ?>
                 <!-- Fim Apresentação-->
+                </div>
                 
             </div>
             <img class="conteudo-principal-imagem" src="../imagens/globo512px.png" alt="imagem do globo">

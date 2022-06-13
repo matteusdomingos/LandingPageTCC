@@ -8,10 +8,10 @@
   <main class="cadastrados">
     <section class="conteudo-cadastrados">
       <div class="conteudo-cadastrados-titulo">
-        <h1>Usuários cadastrados</h1>
+        <h1 class="titulo-cadastrados">Usuários cadastrados</h1>
       </div>
     </section>
-    <section class="tabelas-cadastrados">
+    <section class="lista-usuarios">
       <!-- Inicio 1º passo mostrar dados formulário.-->
       <?php                                                                       
       include_once('config.php');                                                 //incluído pois é a onde a variável $conexao está
@@ -22,20 +22,25 @@
       ?>
       <!--Fim 1º passo mostrar-->
       
-      <table style="width:100% ;">
-        <tr>
-          <th scope="col">#</th>
-          <th scope="col">Nome</th>
-          <th scope="col">Email</th>
-        </tr>
-
+      <table class="tabelas-cadastrados">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Nome</th>
+            <th scope="col">Email</th>
+          </tr>
+        </thead>
         <tbody>
           <?php
+          $i = 0;
           while ($user_data = mysqli_fetch_assoc($result)) {
-            echo "<tr>";
-            echo "<td>" . $user_data['usuario_id'] . "</td>";
-            echo "<td>" . $user_data['usuario_nome'] . "</td>";
-            echo "<td>" . $user_data['usuario_email'] . "</td>";
+            $i++;
+            $class = $i % 2 == 0 ? "realce" : "";
+
+            echo "<tr class='{$class}'>";
+              echo "<td>" . $i . "</td>";
+              echo "<td>" . $user_data['usuario_nome'] . "</td>";
+              echo "<td>" . $user_data['usuario_email'] . "</td>";
             echo "</tr>";
           }
           ?>
